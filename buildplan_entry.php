@@ -5,7 +5,7 @@
     if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit1'])){
     $conn=mysqli_connect('localhost','root','','tour_management') or die("Connection failed" .mysqli_connect_error());
 
-    if(isset($_POST['city'])&& isset($_POST['hotel']) && isset($_POST['travelvia'])){
+    if(isset($_POST['planname'])&& isset($_POST['duration']) && isset($_POST['cost'])){
 
         $q2="SELECT COUNT(*) FROM plan";
         $l1=mysqli_query($conn,$q2);
@@ -17,18 +17,72 @@
         //$query="SELECT * FROM preferences WHERE uid='$temp'";
         $sql="INSERT INTO plan VALUES ('$id','$cost','$duration','$planname')";
         $q1=mysqli_query($conn,$sql);
-        if($q1){
-        header("Location: buildtrip.php");
-        exit;
+      //  if($q1){
+        //    header("Location: buildplan.php");
+       // exit;
+       // }
+     //   else{
+      //      echo 'Some error occured!!';
+       // }
+
+        if((int)$_POST['trip1']!=0)
+        {
+            $var1=$_POST['trip1'];
+            $sql2="INSERT INTO tripsinplan VALUES ('$id','$var1')";
+            $q2=mysqli_query($conn,$sql2);
+        }
+        else {
+            echo 'Trip 1 not set';
+        }
+
+        if((int)$_POST['trip2']!=0)
+        {
+            $var1=$_POST['trip2'];
+            $sql2="INSERT INTO tripsinplan VALUES ('$id','$var1')";
+            $q2=mysqli_query($conn,$sql2);
         }
         else{
-            echo 'Some error occured!!';
+            echo 'Trip 2 not set';
         }
+
+        if((int)$_POST['trip3']!=0)
+        {
+            $var1=$_POST['trip3'];
+            $sql2="INSERT INTO tripsinplan VALUES ('$id','$var1')";
+            $q2=mysqli_query($conn,$sql2);
+        }
+        else {
+            echo 'Trip 3 not set';
+        }
+
+        if((int)$_POST['trip4']!=0)
+        {
+            $var1=$_POST['trip4'];
+            $sql2="INSERT INTO tripsinplan VALUES ('$id','$var1')";
+            $q2=mysqli_query($conn,$sql2);
+        }
+        else{
+            echo 'Trip 4 not set';
+        }
+
+        if((int)$_POST['trip5']!=0)
+        {
+            $var1=$_POST['trip5'];
+            $sql2="INSERT INTO tripsinplan VALUES ('$id','$var1')";
+            $q2=mysqli_query($conn,$sql2);
+        }
+        else{
+            echo 'Trip 5 not set';
+        }
+
+        header("Location: buildplan.php");
+
+
     }
     else{
         
         
-        echo '<script> alert("Error in input")</script>';
+        echo 'Error hua';
         exit;
         // echo '<script> setTimeout(function(){
         //     alert("Error in input");

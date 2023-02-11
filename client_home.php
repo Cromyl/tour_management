@@ -29,7 +29,10 @@
    
 
     <a href="preference_usr.php">User Preference</a>
-
+    <br>
+    <a href="select_a_plan.php">Select a Plan</a>
+    <br>
+    <a href="show_plan_details.php">Show Plan Details</a>
     
     
 
