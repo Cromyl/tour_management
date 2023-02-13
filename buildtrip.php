@@ -14,50 +14,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Trips</h1>
+    <div class="bgimg"></div>
+    <div class="bgtext">
 
-    <br>
-    <h3>Existing Trips</h3>
-    <br>
-    <table style="width:100%">
-    <tr>
-        <td>Trip Id</td>
-        <td>City</td>
-        <td>Hotel</td>
-        <td>Travel Via</td>
-    </tr>
+        <h1>Trips</h1>
     
-    
-        <?php
-            while($row=mysqli_fetch_assoc($result)){
-            ?>
-            <tr>
-            <td>  <?php echo $row['tripid']?></td>
-            <td>  <?php echo $row['city']?></td>
-            <td>  <?php echo $row['hotel']?></td>
-            <td>  <?php echo $row['travelvia']?></td>
-           
-    </tr>
-    
+        <br>
+        <h3>Existing Trips</h3>
+        <br>
+        <table style="width:100%">
+        <tr>
+            <td>Trip Id</td>
+            <td>City</td>
+            <td>Hotel</td>
+            <td>Travel Via</td>
+        </tr>
+        
+        
             <?php
-            }
-        ?>
-        </table>
-        <form action="trip_entry.php" method="post">
-        <h3>Build Trips</h3>
-        <label for="">Travel Destination:</label><br>
-        <input type="text" id="city" name="city">
-        <br><br>
-        <label for="">Lodging Hotel:</label><br>
-        <input type="text" id="hotel" name="hotel">
-        <br><br>
-        <label for="">Travel Via:</label><br>
-        <input type="text" id="travelvia" name="travelvia">
-        <br><br>
-        <input type="submit" name="submit1" id="submit1">
-        </form>
+                while($row=mysqli_fetch_assoc($result)){
+                ?>
+                <tr>
+                <td>  <?php echo $row['tripid']?></td>
+                <td>  <?php echo $row['city']?></td>
+                <td>  <?php echo $row['hotel']?></td>
+                <td>  <?php echo $row['travelvia']?></td>
+               
+        </tr>
+        
+                <?php
+                }
+            ?>
+            </table>
+            <form action="trip_entry.php" method="post">
+            <h3>Build Trips</h3>
+            <label for="">Travel Destination:</label><br>
+            <input type="text" id="city" name="city">
+            <br><br>
+            <label for="">Lodging Hotel:</label><br>
+            <input type="text" id="hotel" name="hotel">
+            <br><br>
+            <label for="">Travel Via:</label><br>
+            <input type="text" id="travelvia" name="travelvia">
+            <br><br>
+            <input type="submit" name="submit1" id="submit1">
+            </form>
+    </div>
     
 </body>
 </html>
