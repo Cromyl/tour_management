@@ -27,7 +27,7 @@
     
         <br>
     
-        <h3>Available PLans</h3>
+        <h3>Available Plans</h3>
         <br>
     
         <table style="width:100%">
@@ -58,7 +58,7 @@
     
     <br>
     
-    <h3>Opted PLan</h3>
+    <h3>Opted Plan</h3>
     
     <table style="width:100%">
         <tr>

@@ -31,7 +31,7 @@
     <a href="admin_pref.php">Preferences of users</a><br>
     <a href="buildtrip.php">Build Trip</a><br>
     <a href="buildplan.php">Build Plan</a><br>
-    <a href="users_in_a_plan.php">People in a PLan</a><br>
+    <a href="users_in_a_plan.php">People in a Plan</a><br>
     <a href="complete_plan.php">Plan Completed</a><br>
 </div>
 </body>

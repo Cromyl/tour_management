@@ -80,6 +80,15 @@
             <label for="">Trip#2:</label><br>
             <input type="number" id="trip2" name="trip2">
             <br>
+            <label for="">Trip#3:</label><br>
+            <input type="number" id="trip3" name="trip3">
+            <br>
+            <label for="">Trip#4:</label><br>
+            <input type="number" id="trip4" name="trip4">
+            <br>
+            <label for="">Trip#5:</label><br>
+            <input type="number" id="trip5" name="trip5">
+            <br>
             <input type="submit" name="submit1" id="submit1">
             </form>
         

@@ -13,7 +13,7 @@
     <h1>Tour Management System</h1>
     <br>
         <a href="client.php">Client Side</a>
-    <br>   
+    <br>   <br>
         <a href="admin.php">Admin Side</a>   
    
     </div>
