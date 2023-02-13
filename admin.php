@@ -16,13 +16,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bgimg"></div>
+    <div class="bgtext">
     <h1>Admin Side</h1>
-
-    <h2>Registered users = <?php echo mysqli_fetch_assoc($result1)['COUNT(*)'];?></h2><br>
-    <h2>Bookings = <?php echo mysqli_fetch_assoc($result2)['COUNT(*)'];?></h2><br>
-    <h2>Packages = <?php echo mysqli_fetch_assoc($result3)['COUNT(*)'];?></h2><br>
+     <hr>
+    <h2>Registered users = <?php echo mysqli_fetch_assoc($result1)['COUNT(*)'];?></h2><hr>
+    <h2>Bookings = <?php echo mysqli_fetch_assoc($result2)['COUNT(*)'];?></h2><hr>
+    <h2>Packages = <?php echo mysqli_fetch_assoc($result3)['COUNT(*)'];?></h2><hr>
     
 
     <a href="admin_pref.php">Preferences of users</a><br>
@@ -30,5 +33,6 @@
     <a href="buildplan.php">Build Plan</a><br>
     <a href="users_in_a_plan.php">People in a PLan</a><br>
     <a href="complete_plan.php">Plan Completed</a><br>
+</div>
 </body>
 </html>
