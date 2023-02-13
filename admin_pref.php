@@ -1,6 +1,6 @@
 <?php 
-    session_start();
-    $temp=$_SESSION['uid'];
+    // session_start();
+    // $temp=$_SESSION['uid'];
     $conn=mysqli_connect('localhost','root','','tour_management') or die("Connection failed" .mysqli_connect_error());
     $query="SELECT * FROM preferences ORDER BY destination";
     
@@ -15,11 +15,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="bgimg"></div>
+    <div class="bgtext">
     <h1>Preference of the Users</h1>
     <br><br>
-
+    <hr>
     <table style="width:100%">
     <tr>
         <td>User-ID</td>
@@ -44,6 +47,6 @@
             }
         ?>
         </table>
-
+        </div>
 </body>
 </html>
