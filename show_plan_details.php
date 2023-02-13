@@ -22,49 +22,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>Plan Details</h1>
-    <br>
-    <br>
-    <h2>Plan Name :</h2>
-    <h3><?php @$row=mysqli_fetch_assoc($result3);
-                if($row!=NULL)
-              echo $row['planname'];  ?></h3>
-
-    <br>
-    <h2>Duration :</h2>
-    <h3><?php if($row!=NULL) echo $row['duration'];   ?> days</h3>
-
-    <br>
-    <h2>Total Cost :</h2>
-    <h3><?php if($row!=NULL) echo $row['cost'];?></h3>
-
-    <table style="width:100%">
-
-    <tr>
-        <td>Location</td>
-        <td>Hotel</td>
-        <td>Travel Via</td>
-    </tr>
-
-    <?php
-            while($row2=mysqli_fetch_assoc($result2)){
-            ?>
-            <tr>
-            <td>   <?php echo $row2['city']?></td>
-            <td>  <?php echo $row2['hotel']?></td>
-            <td>  <?php echo $row2['travelvia']?></td>
-            
-           
-    </tr>
+    <div class="bgimg"></div>
+    <div class="bgtext">
+        <h1>Plan Details</h1>
+       <hr>
+        <h3>Plan Name :<?php @$row=mysqli_fetch_assoc($result3);
+                    if($row!=NULL)
+                  echo $row['planname'];  ?></h3>
+        <br>
+        <h3>Duration :<?php if($row!=NULL) echo $row['duration'];?> days</h3>    
+        <br>
+        <h2>Total Cost :</h2>
+        <h3><?php if($row!=NULL) echo $row['cost'];?></h3>
     
-            <?php
-            }
-        ?>
-
-    </table>
+        <table style="width:100%">
+    
+        <tr>
+            <td>Location</td>
+            <td>Hotel</td>
+            <td>Travel Via</td>
+        </tr>
+    
+        <?php
+                while($row2=mysqli_fetch_assoc($result2)){
+                ?>
+                <tr>
+                <td>   <?php echo $row2['city']?></td>
+                <td>  <?php echo $row2['hotel']?></td>
+                <td>  <?php echo $row2['travelvia']?></td>
+                
+               
+        </tr>
+        
+                <?php
+                }
+            ?>
+    
+        </table>
+    </div>
 
     
 </body>
