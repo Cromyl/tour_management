@@ -10,7 +10,7 @@
             $address=$_POST['address'];
             $password=$_POST['password'];
             $id=$name.$phone;
-            if(strlen($phone)==10 && ctype_alpha($phone)==false && ctype_alpha($name)==true){
+           // if(strlen($phone)==10 && ctype_alpha($phone)==false && ctype_alpha($name)==true){
             $sql="INSERT INTO Client VALUES ('$id','$dob','$name','$address','$phone','$password')";
             //try{
             $query =mysqli_query($conn,$sql);
@@ -24,9 +24,9 @@
             //}catch(Exception $e)
             //{echo 'Value already exists';}
             
-        }
-        else{
+       // }
+       // else{
             echo 'Invalid input';
-        }
+       // }
         }
     }

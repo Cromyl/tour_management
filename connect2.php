@@ -5,6 +5,7 @@ echo $temp;
     $conn=mysqli_connect('localhost','root','','tour_management') or die("Connection failed" .mysqli_connect_error());
     if(isset($_POST['name'])&&isset($_POST['password'])){
 
+        //$tbl_name='client';
         $name=$_POST['name'];
         $password=$_POST['password'];
     
@@ -18,18 +19,18 @@ echo $temp;
         $row2=mysqli_fetch_array($query2);
         print_r($row);
       
-        if($row[0]==1){
-         
-                echo 'Login successful!!';
-                //header("Location: client_home.php?msg=" .$row2[0]);
-                session_start();
-                $karo=print_r($row2[0],true);
-                $_SESSION['uid']= $karo;
-                header("Location: client_home.php");
-            
+
+        if($row[0]==1)
+        {
+        // Register $username, $password and redirect to file "login_success.php"
+            session_start();
+            $karo=print_r($row2[0],true);
+            $_SESSION["uid"] = $karo;
+            header("location:client_home.php");
         }
-        else{
-            echo 'Login unsuccesful !!';
+        else {
+            $failed = 1;
+            header("location:login.php?msg=failed");
         }
     }
 
