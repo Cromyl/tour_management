@@ -25,43 +25,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bgimg"></div>
+<div class="bgimg"></div>
     <div class="bgtext">
-        <h1>Plan Details</h1>
-       <hr>
+    <h1>Plan Details</h1>
+    <hr>
         <h3>Plan Name :<?php @$row=mysqli_fetch_assoc($result3);
-                    if($row!=NULL)
-                  echo $row['planname'];  ?></h3>
-        <br>
-        <h3>Duration :<?php if($row!=NULL) echo $row['duration'];?> days</h3>    
-        <br>
-        <h2>Total Cost :</h2>
-        <h3><?php if($row!=NULL) echo $row['cost'];?></h3>
-    
-        <table style="width:100%">
-    
-        <tr>
-            <td>Location</td>
-            <td>Hotel</td>
-            <td>Travel Via</td>
-        </tr>
-    
-        <?php
-                while($row2=mysqli_fetch_assoc($result2)){
-                ?>
-                <tr>
-                <td>   <?php echo $row2['city']?></td>
-                <td>  <?php echo $row2['hotel']?></td>
-                <td>  <?php echo $row2['travelvia']?></td>
-                
-               
-        </tr>
-        
-                <?php
-                }
+                if($row!=NULL)
+              echo $row['planname'];  ?></h3>
+
+    <br>
+    <h3>Duration :<?php if($row!=NULL) echo $row['duration'];?> days</h3> 
+
+    <br>
+    <h2>Total Cost :</h2>
+    <h3><?php if($row!=NULL) echo $row['cost'];?></h3>
+
+    <table style="width:100%">
+
+    <tr>
+        <td>Location</td>
+        <td>Hotel</td>
+        <td>Travel Via</td>
+    </tr>
+
+    <?php
+            while($row2=mysqli_fetch_assoc($result2)){
             ?>
+            <tr>
+            <td>   <?php echo $row2['city']?></td>
+            <td>  <?php echo $row2['hotel']?></td>
+            <td>  <?php echo $row2['travelvia']?></td>
+            
+           
+    </tr>
     
-        </table>
+            <?php
+            }
+        ?>
+
+    </table>
     </div>
 
     
