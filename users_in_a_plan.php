@@ -27,6 +27,8 @@
             echo json_encode(strval($var),JSON_HEX_TAG);?>;
         
             var planid=document.forms["myform"]["planid"].value;
+            planid=parseInt(planid);
+            mx=parseInt(mx);
             if(planid>=mx){
                 alert("Invalid plan id");
                 return false;
